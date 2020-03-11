@@ -2,7 +2,7 @@
 This App will take a video and use voice recognition and google images to overlay an image every couple seconds which reflects what the person is saying
 
 # Action Plan
-- UI will be made with [Eel](https://pypi.org/project/Eel/) since its is made for python. I originally was going to use electron but was not sucessfull so Eel will do for now.
+- UI will be made with proton native.
 - Need to develop system for getting script for video using speech recognition
 - Write or Adapt script for downloading the images based on script and config
 - Stich images and video together according to settings which will be placed in UI
