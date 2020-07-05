@@ -1,0 +1,247 @@
+* {margin: 0; padding: 0; border: 0; vertical-align: baseline;}
+html {box-sizing: border-box; background-color: black;  overflow-x: hidden;
+  overflow-y: hidden;}
+*, *:before, *:after {box-sizing: inherit;}
+html, body {height: 100%; margin: 0;}
+
+@font-face {
+    font-family: Monda;
+    src: url('./Assets/font/Monda/Monda-Regular.ttf');
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #383854 0%, #383753 6.77%, #3A2D55 100%);
+}
+h1 {margin: 0 0 10px 0; font-weight: 600; line-height: 1.2;}
+p {margin-top: 10px; color: rgba(255,255,255,0.4);}
+
+  
+  #titlebar {
+    z-index: 10;
+    display: block;
+    position: fixed;
+    height: 32px;
+    width: 100%; /*Compensate for body 1px border*/
+    background: #272940;
+    padding: 4px;
+    color: #E5E5E5;
+  }
+
+  #window-title {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    overflow: hidden;
+    font-family: Monda;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+
+    font-size: 20px;
+  }
+  
+  #window-title span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.5;
+    position: relative;
+  }
+
+  #window-title span img {
+        width: 1.2em;
+        height: 1.2em;
+        position: relative;
+        top: 3px;
+        margin-right: 0px;
+      
+
+  }
+  
+  #main {
+    height: calc(100% - 32px);
+    padding: 32px;
+    overflow-y: auto;
+  }
+
+  #titlebar #drag-region {
+    width: 100%;
+    height: 100%;
+    -webkit-app-region: drag;
+  }
+
+  
+  #window-controls {
+    display: grid;
+    grid-template-columns: repeat(3, 46px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+  
+  #window-controls .buttonTopBar {
+    grid-row: 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  #min-button {
+    grid-column: 1;
+  }
+  #max-button, #restore-button {
+    grid-column: 2;
+  }
+  #close-button {
+    grid-column: 3;
+  }
+
+  @media (-webkit-device-pixel-ratio: 1.5), (device-pixel-ratio: 1.5),
+(-webkit-device-pixel-ratio: 2), (device-pixel-ratio: 2),
+(-webkit-device-pixel-ratio: 3), (device-pixel-ratio: 3) {
+  #window-controls .iconTopBar {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+#window-controls {
+    -webkit-app-region: no-drag;
+  }
+  
+  #window-controls .buttonTopBar {
+    user-select: none;
+  }
+  #window-controls .buttonTopBar:hover {
+    background: rgba(255,255,255,0.1);
+  }
+  #window-controls .buttonTopBar:active {
+    background: rgba(255,255,255,0.2);
+  }
+  
+  #close-button:hover {
+    background: #E81123 !important;
+  }
+  #close-button:active {
+    background: #F1707A !important;
+  }
+  #close-button:active .iconTopBar {
+    filter: invert(1);
+  }
+  
+  #restore-button {
+    display: none !important;
+  }
+
+  #titlebar #drag-region {
+    display: grid;
+    grid-template-columns: auto 138px;
+  }
+  
+  .maximized #titlebar {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .maximized #window-title {
+    margin-left: 12px;
+  }
+  
+  .maximized #restore-button {
+    display: flex !important;
+  }
+  
+  .maximized #max-button {
+    display: none;
+  }
+
+ 
+.lineSvg {
+    position: absolute;
+    transform: rotate(60deg);
+    overflow: hidden; 
+   
+   
+    
+  }
+
+  /* Card */
+  
+
+#main{
+  display: flex;
+  width: 100%;
+  height: 105%;;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.card.is-wide {
+  width: 550px;
+  
+}
+
+.card.has-text-centered .card-header,
+.card.has-text-centered .card-content,
+.card.has-text-centered .card-footer {
+  justify-content: center;
+  align-items: center;
+}
+.card.has-text-centered h1 {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.card-header {
+  padding: 1.75rem 0;
+  background-color: #1f242d;
+  color:white;
+}
+
+.card-content {
+  padding: 3.5rem 0;
+  /* background-color: #2c2f33; */
+  background-color: #efeded;
+  color:white;
+}
+
+.card-footer {
+  padding: 1rem 0;
+  border: none;
+  font-size: 0.9rem;
+  background-color: #1f242d;
+  color:white;
+}
+
+#importBtn {
+  background-color: 	#7289da;
+}
+
+.dividerContainer{
+  margin-left: 50px;
+  margin-right: 50px;
+
+}
+
+.inputWidth{
+  margin-left: 100px;
+  margin-right: 100px;
+
+
+
+}
+
+.input{
+ background-color: #efeded; 
+}
+
+.black{
+  color: #23272a;
+}
