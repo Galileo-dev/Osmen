@@ -14,7 +14,7 @@ After further research i'm no longer planning on using python for the backend an
 - ***Voila!***
 
 # Further research
--No Transcription service is free forever :(
+- No Transcription service is free forever :(
 
 # Special Thanks
 [Fluent-ffmpeg](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg)
